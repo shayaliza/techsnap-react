@@ -74,9 +74,9 @@ function CareerPath() {
         </div>
         <div className="w-1/2"></div>
       </div>
-      <div className="md:w-[1250px] w-11/12 m-auto  hidden md:block">
+      <div className="final w-11/12 m-auto  hidden md:block">
         <div className="text-3xl font-bold mt-6 mb-4">Featured careerpaths</div>
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 ">
           <CareerCard />
           <CareerCard />
           <CareerCard />

@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media (min-width: 1013px) and (max-width: 1141px) {
+  .final {
+    width: 800px;
+    margin: auto;
+  }
+}
+
+@media (min-width: 1142px) and (max-width: 1236px) {
+  .final {
+    width: 900px;
+    margin: auto;
+  }
+}
+@media (min-width: 1237px) and (max-width: 1402px) {
+  .final {
+    width: 1000px;
+    margin: auto;
+  }
+}
