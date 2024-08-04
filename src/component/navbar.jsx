@@ -21,13 +21,14 @@ function Navbar() {
         className="bg-white fixed py-2 text-lg w-full z-50"
         style={{ boxShadow: "0 6px 16px -1px rgba(0, 0, 0, 0.3)" }}
       >
-        <div className="sub_header relative mx-auto flex justify-between items-center max-[900px]:min-h-[45px]">
-          <div className="Header_icon flex items-center">
+        <div className="relative mx-auto flex justify-between items-center max-[900px]:min-h-[45px]">
+          <div className=" flex items-center">
             <img
               src="/src/assets/icon.svg"
               alt="Logo"
               className="w-32 h-12 object-contain hidden md:block"
             />
+
             <button
               className="block min-[900px]:hidden ml-2 p-2"
               onClick={toggleMobileMenu}
@@ -35,7 +36,7 @@ function Navbar() {
               <GiHamburgerMenu size={24} />
             </button>
           </div>
-          <div className="Header_Profile flex items-center mr-4">
+          <div className=" flex items-center mr-4">
             <div className="Icons flex items-center min-[900px]:mr-4 justify-end">
               <Points />
               <ProfileIcon />
@@ -184,8 +185,13 @@ function Navbar() {
               </p>
             </Link>
             <Link
-              to="/learnmodules"
-              className="flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
+              to="/learningmodule"
+              className={`flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
+                ${
+                  isActive("/learningmodule")
+                    ? "bg-gray-500 "
+                    : "hover:bg-gray-700"
+                }`}
             >
               <img
                 src="/src/assets/learnmodules.png"
@@ -478,12 +484,12 @@ function Navbar() {
               </Link>
               <Link
                 onClick={toggleMobileMenu}
-                to="/learnmodules"
+                to="/learningmodule"
                 className="flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
               >
                 <img
                   src="/src/assets/learnmodules.png"
-                  alt="learnmodules"
+                  alt="learningmodule"
                   className="w-4 h-4"
                 />
                 <p

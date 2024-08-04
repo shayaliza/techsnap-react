@@ -16,6 +16,7 @@ import Topics from "./pages/topics/topics";
 import Competitors from "./pages/competitors/competitors";
 import LeaderBoard from "./pages/leaderboard/leaderboard";
 import ForgotPassword from "./pages/authentication/forgotpass";
+import LearnModule from "./pages/LearningModule/LearnModule";
 const Routing = () => {
   const Home = () => <h1>Hello World</h1>;
   return (
@@ -24,6 +25,7 @@ const Routing = () => {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/forgotpassword" element={<ForgotPassword />} />
+        {/* <Route path="/learningmodule" element={<LearnModule />} /> */}
 
         {/*  paht/ rm  for makin / as independent*/}
         <Route element={<Navbar />}>
@@ -42,6 +44,7 @@ const Routing = () => {
 
           <Route path="projects" element={<Projects />} />
           <Route path="projects/details" element={<ProjectDetails />} />
+          <Route path="learningmodule" element={<LearnModule />} />
         </Route>
 
         <Route path="*" element={<h1>Page Not Found</h1>} />
