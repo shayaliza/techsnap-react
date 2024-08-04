@@ -95,7 +95,7 @@ function Catalog() {
         <div
           className="underline cursor-pointer"
           onClick={() => {
-            navigate("/courses");
+            navigate("/skill");
           }}
         >
           See all

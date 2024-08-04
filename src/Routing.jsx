@@ -20,6 +20,8 @@ import LearnModule from "./pages/LearningModule/LearnModule";
 import Assement from "./pages/assesment/assement";
 import Catalog from "./pages/catalog/catalog";
 import AssementDetails from "./pages/assesment/deatils";
+import SkillPath from "./pages/skillPath/skillPath";
+import SkillPathDetails from "./pages/skillPath/detail";
 const Routing = () => {
   const Home = () => <h1>Hello World</h1>;
   return (
@@ -41,6 +43,12 @@ const Routing = () => {
 
           <Route path="courses" element={<Cources />} />
           <Route path="courses/details" element={<CourseDetails />} />
+
+          <Route path="career" element={<CareerPath />} />
+          <Route path="career/details" element={<CareerDetails />} />
+
+          <Route path="skill" element={<SkillPath />} />
+          <Route path="skill/details" element={<SkillPathDetails />} />
 
           <Route path="career" element={<CareerPath />} />
           <Route path="career/details" element={<CareerDetails />} />

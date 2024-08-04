@@ -152,6 +152,21 @@ function Navbar() {
               </p>
             </Link>
             <Link
+              to="/skill"
+              className={`flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
+                ${isActive("/skill") ? "bg-gray-500 " : "hover:bg-gray-700"}`}
+              // className="flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
+            >
+              <img
+                src="/src/assets/career-choice.png"
+                alt="career"
+                className="w-4 h-4"
+              />
+              <p className="w-[70%] ml-[10px]" style={{ fontFamily: "Nunito" }}>
+                Skill Paths
+              </p>
+            </Link>
+            <Link
               to="/courses"
               className={`flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
               ${isActive("/courses") ? "bg-gray-500 " : "hover:bg-gray-700"}`}
@@ -184,7 +199,7 @@ function Navbar() {
                 Projects
               </p>
             </Link>
-            <Link
+            {/* <Link
               to="/learningmodule"
               className={`flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
                 ${
@@ -201,7 +216,7 @@ function Navbar() {
               <p className="w-[70%] ml-[10px]" style={{ fontFamily: "Nunito" }}>
                 Learn Modules
               </p>
-            </Link>
+            </Link> */}
             <Link
               to="/assesment"
               className={`flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
@@ -447,6 +462,24 @@ function Navbar() {
               </Link>
               <Link
                 onClick={toggleMobileMenu}
+                to="/skill"
+                className={`flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
+                 ${isActive("/skill") ? "bg-gray-500 " : "hover:bg-gray-700"}`}
+              >
+                <img
+                  src="/src/assets/career-choice.png"
+                  alt="career"
+                  className="w-4 h-4"
+                />
+                <p
+                  className="w-[70%] ml-[10px]"
+                  style={{ fontFamily: "Nunito" }}
+                >
+                  Skill Paths
+                </p>
+              </Link>
+              <Link
+                onClick={toggleMobileMenu}
                 to="/courses"
                 className={`flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
                   ${
@@ -485,7 +518,7 @@ function Navbar() {
                   Projects
                 </p>
               </Link>
-              <Link
+              {/* <Link
                 onClick={toggleMobileMenu}
                 to="/learningmodule"
                 className="flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
@@ -501,7 +534,7 @@ function Navbar() {
                 >
                   Learn Modules
                 </p>
-              </Link>
+              </Link> */}
               <Link
                 onClick={toggleMobileMenu}
                 to="/assesment"
