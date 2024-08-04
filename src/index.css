@@ -21,3 +21,17 @@
     margin: auto;
   }
 }
+
+@media (min-width: 1403px) and (max-width: 1600px) {
+  .final {
+    width: 1200px;
+    margin: auto;
+  }
+}
+
+@media (min-width: 1601px) and (max-width: 1800px) {
+  .final {
+    width: 1300px;
+    margin: auto;
+  }
+}

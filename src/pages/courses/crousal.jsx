@@ -39,11 +39,15 @@ function Crousal() {
         },
         // when window width is >= 768px
         768: {
-          slidesPerView: 3,
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1300: {
+          slidesPerView: 2,
           spaceBetween: 40,
         },
         // when window width is >= 1024px
-        1024: {
+        1400: {
           slidesPerView: 3,
           spaceBetween: 50,
         },

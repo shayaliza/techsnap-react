@@ -93,8 +93,8 @@ function Projects() {
   return (
     <div>
       <div class="w-full mx-auto max_width_holder max-w-[1400px] max-[1500px]:max-w-[1100px] overflow-x-hidden overflow-y-scroll ">
-        <section class="assesment_section">
-          <div class="banner bg-color relative bg-[#26cd7f]">
+        <section class="">
+          <div class="final bg-color relative bg-[#26cd7f]">
             <div class="flex items-center max-[900px]:flex-col-reverse justify-between min-[900px]:h-[400px]">
               <div class="w-full lg:w-1/2">
                 <div class="px-6 py-2">
@@ -136,18 +136,18 @@ function Projects() {
               </div>
             </div>
           </div>
-          <div class="course_popular_card_section p-4">
+          <div class="final p-4">
             <div class="title relative text-2xl mt-12 mb-4 font-bold">
               <h1>Popular Projects</h1>
             </div>
-            <div class="popular_card_section flex flex-wrap justify-center">
+            <div class=" flex flex-wrap ">
               <Card />
               <Card />
               <Card />
             </div>
           </div>
 
-          <div class="courses_section px-4">
+          <div class=" px-4">
             <div class="title flex justify-between items-center text-xl">
               <div>
                 <p class="font-bold">All courses</p>
@@ -171,7 +171,7 @@ function Projects() {
                 </form>
               </div>
             </div>
-            <div class="coures_card_section flex flex-wrap justify-between">
+            <div class=" flex flex-wrap ">
               <Card />
               <Card />
               <Card />

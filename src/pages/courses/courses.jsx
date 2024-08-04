@@ -17,7 +17,7 @@ function Cources() {
     <>
       <div>
         {/* <!-- @New Banner --> */}
-        <section class="bg-gray-200 w-11/12 m-auto mt-8 pb-8 rounded-md h-auto shadow-lg">
+        <section class="bg-gray-200 final m-auto mt-8 pb-8 rounded-md h-auto shadow-lg">
           {/* <!-- @First Card Section --> */}
           <div class="w-11/12 md:w-11/12 m-auto pt-4 hidden md:block">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -221,16 +221,16 @@ function Cources() {
           </div>
         </section>
         {/* Feature Courses */}
-        <div className="hidden md:block py-8 px-4">
+        <div className="hidden md:block final py-8 px-4">
           <div className="text-3xl font-bold mb-6">
             <p>Featured Courses</p>
           </div>
-          <div className=" lg:w-[1150px] lg:mx-auto ">
+          <div className="m-auto ">
             <Crousal />
           </div>
         </div>
         {/* All Courses */}
-        <div className="hidden md:block">
+        <div className="hidden md:block final">
           <AllCourses />
         </div>
         {/* Mobile View */}

@@ -56,7 +56,7 @@ function CareerPath() {
   };
   return (
     <div className=" w-full">
-      <div className="lg:w-[1250px] m-auto  bg-gradient-to-r rounded-lg text-white from-[#f4b9cd] to-[#8677ae]  md:mt-5 mt-1 ">
+      <div className="final m-auto  bg-gradient-to-r rounded-lg text-white from-[#f4b9cd] to-[#8677ae]  md:mt-5 mt-1 ">
         <div className="lg:w-1/2 w-full md:p-8 p-6">
           <div className="md:text-5xl text-2xl font-bold mt-4 ">
             Discover your path and land on your dream career
@@ -84,7 +84,7 @@ function CareerPath() {
         <div className="text-3xl font-bold mt-6 mb-4">All careerpaths</div>
 
         {/* Tags */}
-        <div class="sticky  top-0 z-10 flex flex-wrap gap-2 mb-8 max-w-[1150px] mx-auto px-4 py-2 bg-white h-14 overflow-hidden md:overflow-auto md:h-auto">
+        <div class="sticky  top-0 z-10 flex flex-wrap gap-2 mb-8 final mx-auto px-4 py-2 bg-white h-14 overflow-hidden md:overflow-auto md:h-auto">
           <div
             class="tagCourse p-3 bg-black text-white rounded-md flex-shrink-0"
             data-tag="all"
