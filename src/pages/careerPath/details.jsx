@@ -103,10 +103,10 @@ function CareerDetails() {
           </div>
         </div>
       </div>
-      <div className=" m-auto">
-        <div className="text-2xl font-bold my-4 w-full pl-4 md:w-full m-auto">
+      <div className=" m-auto mt-2">
+        {/* <div className="text-2xl font-bold my-4 w-full pl-4 md:w-full m-auto">
           Start Your Journey
-        </div>
+        </div> */}
         <Path />
         <div className="text-2xl font-bold my-4 w-full pl-4 md:w-full  m-auto">
           Also Must to Know About

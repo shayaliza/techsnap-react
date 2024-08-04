@@ -314,6 +314,7 @@ function Navbar() {
                 to="/"
                 className={`flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
                   ${isActive("/") ? "bg-gray-500 " : "hover:bg-gray-700"}`}
+                onClick={toggleMobileMenu}
               >
                 <img
                   src="/src/assets/self-growth3.png"
@@ -328,6 +329,7 @@ function Navbar() {
                 </p>
               </Link>
               <Link
+                onClick={toggleMobileMenu}
                 to="/myfeed"
                 className={`flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
                   ${
@@ -347,6 +349,7 @@ function Navbar() {
                 </p>
               </Link>
               <Link
+                onClick={toggleMobileMenu}
                 to="#"
                 className="flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
               >
@@ -363,9 +366,14 @@ function Navbar() {
                 </p>
               </Link>
               <Link
+                onClick={toggleMobileMenu}
                 to="/competitions"
                 className={`flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
-   ${isActive("/competitions") ? "bg-gray-500 " : "hover:bg-gray-700"}`}
+                ${
+                  isActive("/competitions")
+                    ? "bg-gray-500 "
+                    : "hover:bg-gray-700"
+                }`}
               >
                 <img
                   src="/src/assets/stage.png"
@@ -380,6 +388,7 @@ function Navbar() {
                 </p>
               </Link>
               <Link
+                onClick={toggleMobileMenu}
                 to="/leaderboard"
                 className={`flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
                ${
@@ -410,6 +419,7 @@ function Navbar() {
                 </h4>
               </div>
               <Link
+                onClick={toggleMobileMenu}
                 to="/career"
                 className={`flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
                  ${isActive("/career") ? "bg-gray-500 " : "hover:bg-gray-700"}`}
@@ -427,6 +437,7 @@ function Navbar() {
                 </p>
               </Link>
               <Link
+                onClick={toggleMobileMenu}
                 to="/courses"
                 className={`flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
                   ${
@@ -446,6 +457,7 @@ function Navbar() {
                 </p>
               </Link>
               <Link
+                onClick={toggleMobileMenu}
                 to="/projects"
                 className={`flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
                   ${
@@ -465,6 +477,7 @@ function Navbar() {
                 </p>
               </Link>
               <Link
+                onClick={toggleMobileMenu}
                 to="/learnmodules"
                 className="flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
               >
@@ -481,6 +494,7 @@ function Navbar() {
                 </p>
               </Link>
               <Link
+                onClick={toggleMobileMenu}
                 to="#"
                 className="flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
               >
@@ -497,6 +511,7 @@ function Navbar() {
                 </p>
               </Link>
               <Link
+                onClick={toggleMobileMenu}
                 to="#"
                 className="flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
               >
@@ -524,6 +539,7 @@ function Navbar() {
                 </h4>
               </div>
               <Link
+                onClick={toggleMobileMenu}
                 to="#"
                 className="flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
               >
@@ -540,6 +556,7 @@ function Navbar() {
                 </p>
               </Link>
               <Link
+                onClick={toggleMobileMenu}
                 to="#"
                 className="flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
               >
@@ -556,6 +573,7 @@ function Navbar() {
                 </p>
               </Link>
               <Link
+                onClick={toggleMobileMenu}
                 to="#"
                 className="flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
               >
@@ -572,6 +590,7 @@ function Navbar() {
                 </p>
               </Link>
               <Link
+                onClick={toggleMobileMenu}
                 to="#"
                 className="flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
               >
@@ -594,7 +613,11 @@ function Navbar() {
           </div>
         </div>
         {/* </div> */}
-        <div class="min-[900px]:ml-52 flex-1 mt-16 mb-10 md:mb-0  overflow-y-auto">
+        <div
+          className={`min-[900px]:ml-52 flex-1 mt-16 mb-10 md:mb-0  overflow-y-auto ${
+            isMobileMenuOpen ? "blur  " : ""
+          } `}
+        >
           <Outlet />
         </div>
       </div>
