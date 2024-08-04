@@ -1,103 +1,250 @@
 import React, { useState } from "react";
-import { FaGoogle, FaApple, FaEye, FaEyeSlash } from "react-icons/fa";
-import { GoLock } from "react-icons/go";
-import { Link } from "react-router-dom";
+import "alertifyjs/build/css/alertify.min.css";
+import "alertifyjs/build/css/themes/default.min.css";
+import alertify from "alertifyjs";
+import "./LoginPage.css"; // Create this CSS file for custom styles
 import logo from "../../assets/logo-black.png";
+import { Link } from "react-router-dom";
 
-function SignIn() {
-  const [passwordVisible, setPasswordVisible] = useState(false);
+const SignIn = () => {
+  const [isRegister, setIsRegister] = useState(false);
+  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("");
+  const [passwordValidationMessage, setPasswordValidationMessage] =
+    useState("");
+  const [usernameValidationMessage, setUsernameValidationMessage] =
+    useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const togglePasswordVisibility = () => {
-    setPasswordVisible(!passwordVisible);
+  const handleSwitch = () => {
+    setIsRegister(!isRegister);
+  };
+
+  const handleAlert = () => {
+    // Example of showing an alert using alertify
+    alertify.success("AlertifyJS is working!");
+  };
+
+  const isPasswordValid = (password) => {
+    if (password.length < 8) return false;
+    if (!/\d/.test(password)) return false;
+    if (!/[A-Z]/.test(password)) return false;
+    return true;
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    let valid = true;
+
+    // Username validation
+    if (username.trim() === "") {
+      setUsernameValidationMessage("Please choose a username.");
+      valid = false;
+    } else {
+      setUsernameValidationMessage("");
+    }
+
+    // Password validation
+    if (!isPasswordValid(password)) {
+      setPasswordValidationMessage(
+        "Password must be at least 8 characters long and contain at least one number and one uppercase letter."
+      );
+      valid = false;
+    } else {
+      setPasswordValidationMessage("");
+    }
+
+    if (valid) {
+      setIsSubmitting(true);
+      // Handle form submission (e.g., using fetch or axios)
+      // Example: fetch('/your-submit-url', { method: 'POST', body: new FormData(event.target) })
+      //       .then(response => { /* handle response */ })
+      //       .finally(() => setIsSubmitting(false));
+    }
   };
 
   return (
-    <div>
-      <div className="flex ">
-        <img src={logo} height={200} width={200} />
-      </div>
-      <div className="w-11/12 sm:w-1/2 md:w-1/2 flex justify-center flex-col m-auto text-center mt-0">
-        <div className="text-3xl font-bold text-[#000B18]">Sign In</div>
-        <div className="text-md text-[#000B18] pt-2 font-semibold">
-          Welcome back, you've been missed!
-        </div>
-        {/* //#Different Login Buttons */}
-        <div className="flex flex-col sm:flex-row justify-center mt-14 w-11/12 sm:w-9/12 m-auto gap-4">
-          <div className="bg-[#f285da9f] px-4 py-2 rounded-md text-[#000B18] text-sm font-medium flex flex-row gap-2 items-center justify-center">
-            <FaGoogle />
-            <button>Login with Google</button>
-          </div>
-          {/* <div className="bg-[#f285da9f] px-4 py-2 rounded-md text-[#000B18] text-sm font-medium flex flex-row gap-2 items-center justify-center">
-            <FaApple size={20} />
-            <button>Login with Apple</button>
-          </div> */}
-        </div>
-        <div className="relative mt-12">
-          <div className="border-b-2 border-gray-300"></div>
-          <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 bg-white px-4 text-sm font-medium">
-            OR
+    <div className="container-fluid bg">
+      <div className="row">
+        <div className="col-lg-7 col-md-7">
+          <div className="logo">
+            <img src={logo} alt="logo" className="img" />
           </div>
         </div>
-        {/* //#Form */}
-        <form
-          className="flex flex-col gap-4 mt-12"
-          // onSubmit={handleSubmit(onSubmit)}
-        >
-          <div className="relative">
-            <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#77045f]">
-              @
-            </span>
-            <input
-              type="email"
-              placeholder="Your Email"
-              // {...register("email")}
-              className="pl-8 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#77045f]"
-            />
-          </div>
+        <div className="col-md-12">
+          <section className="contact-us-section">
+            <div className="contact-us-right">
+              <div className="contact-us-form-holder">
+                {isRegister ? (
+                  <>
+                    <p className="heading">Create Your Free Account</p>
+                    <form
+                      onSubmit={handleSubmit}
+                      className="needs-validation"
+                      id="post_form"
+                    >
+                      <input
+                        type="hidden"
+                        name="csrfmiddlewaretoken"
+                        value="k77RCqoCXlELdbY4JxlRMtwMFHAvBd7aZGccS8ySgkDsLsyKNUsxFfBSMyXOP7XK"
+                      />
 
-          <div className="relative">
-            <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#77045f]">
-              <GoLock />
-            </span>
-            <span
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#77045f] cursor-pointer"
-              onClick={togglePasswordVisibility}
-            >
-              {passwordVisible ? <FaEye /> : <FaEyeSlash />}
-            </span>
-            <input
-              type={passwordVisible ? "text" : "password"}
-              placeholder="Create Password"
-              className="pl-8 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#77045f]"
-            />
-          </div>
-          <Link
-            to={"/forgotpassword"}
-            className="flex justify-end text-[#77045f]"
-          >
-            Forgot Password?
-          </Link>
-          <div
-            type="submit"
-            className="text-white bg-[#77045f] p-2 rounded-md mt-4 cursor-pointer"
-          >
-            Sign In
-          </div>
-          <div className="mt-3">
-            <div>
-              You don't have an account?
-              <Link
-                to={"/signup"}
-                className="text-[#77045f] cursor-pointer ml-2"
-              >
-                Sign Up
-              </Link>
+                      <label htmlFor="username" className="form-label">
+                        Username
+                      </label>
+                      <input
+                        className={`form-control ${
+                          usernameValidationMessage ? "is-invalid" : ""
+                        }`}
+                        id="username"
+                        type="text"
+                        placeholder="Username"
+                        name="username"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                        required
+                      />
+                      <div className="invalid-feedback">
+                        {usernameValidationMessage}
+                      </div>
+
+                      <label htmlFor="email" className="form-label">
+                        Email Address
+                      </label>
+                      <input
+                        className="form-control"
+                        type="email"
+                        placeholder="Email"
+                        name="email"
+                        id="email"
+                        required
+                      />
+                      <div className="invalid-feedback">
+                        Please provide a valid email.
+                      </div>
+
+                      <label htmlFor="password" className="form-label">
+                        Password
+                      </label>
+                      <input
+                        className={`form-control ${
+                          passwordValidationMessage ? "is-invalid" : ""
+                        }`}
+                        type="password"
+                        placeholder="Password"
+                        name="password"
+                        id="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                      />
+                      <div id="passwordValidation" className="invalid-feedback">
+                        {passwordValidationMessage}
+                      </div>
+
+                      <button
+                        type="submit"
+                        id="loginBtn"
+                        onClick={handleAlert}
+                        disabled={isSubmitting}
+                      >
+                        Start Learning For Free
+                      </button>
+                      <p className="terms">
+                        By continuing, you accept our Terms of Use, our Privacy
+                        Policy. You confirm you are at least 16 years old (13 if
+                        you are an authorized Classrooms user).
+                      </p>
+                      <p className="switch-text">
+                        Already have an account?{" "}
+                        <Link onClick={handleSwitch}>Login Here</Link>
+                      </p>
+                    </form>
+                  </>
+                ) : (
+                  <>
+                    <p className="heading">Welcome Back!</p>
+                    <div className="contact-us-or-line">
+                      <h5 className="divide">
+                        <span>or</span>
+                      </h5>
+                    </div>
+                    <form
+                      onSubmit={handleSubmit}
+                      className="needs-validation"
+                      id="post_form"
+                    >
+                      <input
+                        type="hidden"
+                        name="csrfmiddlewaretoken"
+                        value="UdM0s1WGANMNLuIt1S15ZC933VStWQMBzMRlIJ6WTMLujLi95f8LSoe9aMfMaKCb"
+                      />
+
+                      <label htmlFor="username" className="form-label">
+                        Username or Email Address
+                      </label>
+                      <input
+                        className={`form-control ${
+                          usernameValidationMessage ? "is-invalid" : ""
+                        }`}
+                        type="text"
+                        placeholder="Username or Email"
+                        name="username"
+                        required
+                      />
+                      <div className="invalid-feedback">
+                        Please provide a valid username or email.
+                      </div>
+
+                      <label htmlFor="password" className="form-label">
+                        Password
+                      </label>
+                      <input
+                        className={`form-control ${
+                          passwordValidationMessage ? "is-invalid" : ""
+                        }`}
+                        type="password"
+                        placeholder="Password"
+                        name="password"
+                        required
+                      />
+                      <div className="invalid-feedback">
+                        Please provide a valid Password.
+                      </div>
+
+                      <button
+                        className="button"
+                        name="login_page"
+                        id="loginBtn"
+                        type="submit"
+                        onClick={handleAlert}
+                        disabled={isSubmitting}
+                      >
+                        Login
+                      </button>
+                      <br />
+                      <label>
+                        <Link id="forget_pass" to="/forgotpassword">
+                          Forgot your password?
+                        </Link>
+                      </label>
+                      <br />
+                      <p className="switch-text">
+                        Don&apos;t have an account?{" "}
+                        <Link href="#" onClick={handleSwitch}>
+                          Register Here
+                        </Link>
+                      </p>
+                    </form>
+                  </>
+                )}
+              </div>
             </div>
-          </div>
-        </form>
+          </section>
+        </div>
       </div>
     </div>
   );
-}
+};
 
 export default SignIn;

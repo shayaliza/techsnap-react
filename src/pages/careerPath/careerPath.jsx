@@ -167,7 +167,7 @@ function CareerPath() {
       </div>
       {/* Mobile View */}
       <div className="md:hidden block">
-        <div class="sticky  top-0 z-10 flex flex-wrap gap-2 mb-8 max-w-[1150px] mx-auto px-4 py-2 bg-white  overflow-hidden md:overflow-auto md:h-auto">
+        <div class="sticky  top-0 z-10 flex flex-wrap gap-2 mb-2 max-w-[1150px] mx-auto px-4 py-2 bg-white  overflow-hidden md:overflow-auto md:h-auto">
           <div
             class="tagCourse p-3 bg-black text-white rounded-md flex-shrink-0"
             data-tag="all"
@@ -206,6 +206,42 @@ function CareerPath() {
             Web Development
           </div>
         </div>
+        <div className="flex flex-col mb-2 ml-2">
+          <div className="flex flex-row gap-4 items-center w-full mb-2">
+            <span className="text-sm font-semibold p-1">Sort by:</span>
+            <div className="flex  gap-2  flex-row w-auto">
+              <div className="flex items-center rounded-3xl border-gray-500 p-1 border text-xs">
+                <span className="mr-2">Option 1:</span>
+                <select className="border-none focus:outline-none rounded-md font-bold">
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-row gap-4 items-center w-full ">
+            <span className="text-sm font-semibold p-1">Filter by:</span>
+            <div className="flex  gap-1  flex-row w-auto">
+              <div className="flex items-center rounded-3xl border-gray-500 p-1 border text-xs ">
+                <span className="mr-1">Option 1:</span>
+                <select className="border-none focus:outline-none rounded-md font-bold">
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+              <div className="flex items-center rounded-3xl border-gray-500 p-1 border text-xs">
+                <span className="mr-1">Option 1:</span>
+                <select className="border-none focus:outline-none rounded-md font-bold">
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div className="md:hidden grid grid-cols-2 gap-4 pb-10 w-11/12 m-auto">
         <div className="flex flex-col p-4 bg-white shadow-md border">
@@ -216,7 +252,7 @@ function CareerPath() {
             <div>techsnap</div>
           </div>
           <div className="border border-gray-200 mt-4"></div>
-          <div className="flex justify-between mt-2">
+          <div className="flex justify-between mt-2" onClick={handleClick}>
             <div className="text-blue-500">View Path</div>
             <div>
               <FaRightLong className="mt-1 text-blue-500" />
@@ -231,7 +267,7 @@ function CareerPath() {
             <div>techsnap</div>
           </div>
           <div className="border border-gray-200 mt-4"></div>
-          <div className="flex justify-between mt-2">
+          <div className="flex justify-between mt-2" onClick={handleClick}>
             <div className="text-blue-500">View Path</div>
             <div>
               <FaRightLong className="mt-1 text-blue-500" />
@@ -246,7 +282,7 @@ function CareerPath() {
             <div>techsnap</div>
           </div>
           <div className="border border-gray-200 mt-4"></div>
-          <div className="flex justify-between mt-2">
+          <div className="flex justify-between mt-2 " onClick={handleClick}>
             <div className="text-blue-500">View Path</div>
             <div>
               <FaRightLong className="mt-1 text-blue-500" />
@@ -261,7 +297,7 @@ function CareerPath() {
             <div>techsnap</div>
           </div>
           <div className="border border-gray-200 mt-4"></div>
-          <div className="flex justify-between mt-2">
+          <div className="flex justify-between mt-2" onClick={handleClick}>
             <div className="text-blue-500">View Path</div>
             <div>
               <FaRightLong className="mt-1 text-blue-500" />
