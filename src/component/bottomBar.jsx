@@ -41,10 +41,10 @@ function BottomBar() {
           </span>
         </Link>
         <Link
-          to={"/courses"}
+          to={"/catalog"}
           className={`inline-flex flex-col items-center justify-center px-5 "
        ${
-         isActive("/courses")
+         isActive("/catalog")
            ? "bg-gray-400 rounded-2xl text-white"
            : "hover:bg-gray-700 "
        }`}

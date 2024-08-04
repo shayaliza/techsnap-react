@@ -18,6 +18,7 @@ import LeaderBoard from "./pages/leaderboard/leaderboard";
 import ForgotPassword from "./pages/authentication/forgotpass";
 import LearnModule from "./pages/LearningModule/LearnModule";
 import Assement from "./pages/assesment/assement";
+import Catalog from "./pages/catalog/catalog";
 const Routing = () => {
   const Home = () => <h1>Hello World</h1>;
   return (
@@ -47,6 +48,7 @@ const Routing = () => {
           <Route path="projects/details" element={<ProjectDetails />} />
           <Route path="learningmodule" element={<LearnModule />} />
           <Route path="assesment" element={<Assement />} />
+          <Route path="catalog" element={<Catalog />} />
         </Route>
 
         <Route path="*" element={<h1>Page Not Found</h1>} />
