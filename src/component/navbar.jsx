@@ -203,8 +203,11 @@ function Navbar() {
               </p>
             </Link>
             <Link
-              to="#"
-              className="flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
+              to="/assesment"
+              className={`flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
+                ${
+                  isActive("/assesment") ? "bg-gray-500 " : "hover:bg-gray-700"
+                }`}
             >
               <img
                 src="/src/assets/clipboard.png"
@@ -501,8 +504,13 @@ function Navbar() {
               </Link>
               <Link
                 onClick={toggleMobileMenu}
-                to="#"
-                className="flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
+                to="/assesment"
+                className={`flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
+                  ${
+                    isActive("/assesment")
+                      ? "bg-gray-500 "
+                      : "hover:bg-gray-700"
+                  }`}
               >
                 <img
                   src="/src/assets/clipboard.png"

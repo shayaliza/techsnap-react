@@ -17,6 +17,7 @@ import Competitors from "./pages/competitors/competitors";
 import LeaderBoard from "./pages/leaderboard/leaderboard";
 import ForgotPassword from "./pages/authentication/forgotpass";
 import LearnModule from "./pages/LearningModule/LearnModule";
+import Assement from "./pages/assesment/assement";
 const Routing = () => {
   const Home = () => <h1>Hello World</h1>;
   return (
@@ -45,6 +46,7 @@ const Routing = () => {
           <Route path="projects" element={<Projects />} />
           <Route path="projects/details" element={<ProjectDetails />} />
           <Route path="learningmodule" element={<LearnModule />} />
+          <Route path="assesment" element={<Assement />} />
         </Route>
 
         <Route path="*" element={<h1>Page Not Found</h1>} />
