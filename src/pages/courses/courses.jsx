@@ -312,19 +312,31 @@ function Cources() {
           </div>
         </div>
         <div className="md:hidden grid grid-cols-2 gap-4 pb-10 w-11/12 m-auto">
-          <div className="flex flex-col p-4 bg-white shadow-md border">
+          <div
+            className="flex flex-col p-4 bg-white shadow-md border"
+            onClick={handleClick}
+          >
             <img src="https://djeqr6to3dedg.cloudfront.net/repo-logos/library/python/live/logo-1720462259584.png" />
             <div className="mt-2 font-semibold">Introduction to Python</div>
           </div>
-          <div className="flex flex-col p-4 bg-white shadow-md border">
+          <div
+            className="flex flex-col p-4 bg-white shadow-md border"
+            onClick={handleClick}
+          >
             <img src="https://djeqr6to3dedg.cloudfront.net/repo-logos/library/python/live/logo-1720462259584.png" />
             <div className="mt-2 font-semibold">Introduction to Python</div>
           </div>
-          <div className="flex flex-col p-4 bg-white shadow-md border">
+          <div
+            className="flex flex-col p-4 bg-white shadow-md border"
+            onClick={handleClick}
+          >
             <img src="https://djeqr6to3dedg.cloudfront.net/repo-logos/library/python/live/logo-1720462259584.png" />
             <div className="mt-2 font-semibold">Introduction to Python</div>
           </div>
-          <div className="flex flex-col p-4 bg-white shadow-md border">
+          <div
+            className="flex flex-col p-4 bg-white shadow-md border"
+            onClick={handleClick}
+          >
             <img src="https://djeqr6to3dedg.cloudfront.net/repo-logos/library/python/live/logo-1720462259584.png" />
             <div className="mt-2 font-semibold">Introduction to Python</div>
           </div>
