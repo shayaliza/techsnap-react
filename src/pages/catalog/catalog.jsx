@@ -1,7 +1,10 @@
 import React from "react";
 import { FaRightLong } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 function Catalog() {
+  const navigate = useNavigate();
+
   return (
     <div>
       <div className="sticky top-0 z-10 flex flex-wrap gap-2 mb-2 max-w-[1150px] mx-auto px-4 py-2 bg-white overflow-hidden md:overflow-auto md:h-auto">
@@ -45,7 +48,14 @@ function Catalog() {
       {/* Popular Tracks */}
       <div className="flex justify-between w-11/12 m-auto my-2 text-lg">
         <div className="font-bold">Popular Tracks</div>
-        <div className="underline">See all</div>
+        <div
+          className="underline cursor-pointer"
+          onClick={() => {
+            navigate("/career");
+          }}
+        >
+          See all
+        </div>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pb-10 w-11/12 m-auto">
         <div className="flex flex-col p-4 bg-white shadow-md border">
@@ -82,7 +92,14 @@ function Catalog() {
       {/* Popular Skill Path */}
       <div className="flex justify-between w-11/12 m-auto my-2 text-lg">
         <div className="font-bold">Popular Skills Path</div>
-        <div className="underline">See all</div>
+        <div
+          className="underline cursor-pointer"
+          onClick={() => {
+            navigate("/courses");
+          }}
+        >
+          See all
+        </div>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pb-10 w-11/12 m-auto">
         <div className="flex flex-col p-4 bg-white shadow-md border">
@@ -109,7 +126,14 @@ function Catalog() {
       {/* Popular Courses */}
       <div className="flex justify-between w-11/12 m-auto my-2 text-lg">
         <div className="font-bold">Popular Courses</div>
-        <div className="underline">See all</div>
+        <div
+          className="underline cursor-pointer"
+          onClick={() => {
+            navigate("/courses");
+          }}
+        >
+          See all
+        </div>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pb-10 w-11/12 m-auto">
         <div className="flex flex-col p-4 bg-white shadow-md border">
@@ -143,7 +167,14 @@ function Catalog() {
       {/* Popular Projects */}
       <div className="flex justify-between w-11/12 m-auto my-2 text-lg">
         <div className="font-bold">Popular Projects</div>
-        <div className="underline">See all</div>
+        <div
+          className="underline cursor-pointer"
+          onClick={() => {
+            navigate("/projects");
+          }}
+        >
+          See all
+        </div>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pb-10 w-11/12 m-auto">
         <div className="flex flex-col p-4 bg-white shadow-md border">
@@ -164,7 +195,14 @@ function Catalog() {
       {/* Popular Skill Assessment */}
       <div className="flex justify-between w-11/12 m-auto my-2 text-lg">
         <div className="font-bold">Popular Skill Assessment</div>
-        <div className="underline">See all</div>
+        <div
+          className="underline cursor-pointer"
+          onClick={() => {
+            navigate("/projects");
+          }}
+        >
+          See all
+        </div>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pb-10 w-11/12 m-auto">
         <div className="flex flex-col p-4 bg-white shadow-md border">
