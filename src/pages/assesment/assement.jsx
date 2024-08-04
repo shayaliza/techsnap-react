@@ -1,40 +1,23 @@
 import React from "react";
-import { FaProjectDiagram } from "react-icons/fa";
-import { FaBook, FaClipboardCheck } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 function Assement() {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/assesment/details");
+  };
   const CareerCard = () => {
     return (
-      <div className="bg-white rounded-lg border-black border p-6 shadow-md">
-        <div className="flex gap-4">
-          <div className="bg-gray-300  px-4 py-1 rounded-md">Free</div>
-          <div className="bg-gray-300  px-4 py-1 rounded-md">Popular</div>
-        </div>
-        <h2 className="text-lg font-bold text-gray-800 mb-2 mt-2">
-          Introduction to SQL
-        </h2>
-        <div className="flex flex-col mt-4 mb-4">
-          <div className="flex gap-4 text-sm">
-            <div className="flex items-center gap-2">
-              <FaBook />
-              <span>12 Courses</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <FaProjectDiagram />
-              <span>3 Projects</span>
-            </div>
-          </div>
-          <div className="flex items-center gap-2 text-sm pt-3">
-            <FaClipboardCheck />
-            <span>3 Skill Assessments</span>
-          </div>
-        </div>
-        <div className="flex gap-4">
-          <div className="bg-white border border-black  px-4 py-1 rounded-md">
-            Syallabus
-          </div>
-          <div className="bg-blue-800 text-white  px-4 py-1 rounded-md">
-            Start Assesment
+      <div className="flex flex-col p-4 bg-white shadow-md border">
+        <div className="text-[#8677ae] text-sm">ASSESMENT</div>
+        <div className="font-bold">Azure Fundamentals</div>
+
+        <div className="border border-gray-200 mt-10"></div>
+        <div className="flex justify-between mt-2" onClick={handleClick}>
+          <div className="text-gray-800">Theory</div>
+          <div className="flex gap-3">
+            <div className="text-blue-500 font-semibold">Topics</div>
+            <div className="border border-gray-800 rounded-md px-2 ">Start</div>
           </div>
         </div>
       </div>
@@ -42,63 +25,116 @@ function Assement() {
   };
   return (
     <div>
-      <div>
-        <div class="w-full mx-auto max_width_holder max-w-[1400px] max-[1500px]:max-w-[1100px] overflow-x-hidden overflow-y-scroll ">
-          <section class="assesment_section">
-            <div class="banner bg-color relative bg-[#26cd7f]">
-              <div class="flex items-center max-[900px]:flex-col-reverse justify-between min-[900px]:h-[400px]">
-                <div class="w-full lg:w-1/2">
-                  <div class="px-6 py-2">
-                    <div class="text-3xl font-bold mb-4">
-                      Grow Your Skills and Elevate your Career to next Level
-                      with Our Courses
-                    </div>
-                    <div class="mb-4">
-                      <p class="text-sm">
-                        Learn the basics, or refine your skills with tutorials
-                        designed to inspire from top mentors and specialist
-                        organisations. Get Career Guidance and Boost Your Resume
-                        and also Learn faster with real hands-on projects and
-                        quizes and assesments
-                      </p>
-                    </div>
-                    <div class="mb-4">
-                      <p class="text-base">
-                        Get <span class="text-purple-500">Skilled.</span> Get
-                        <span class="text-purple-500">Certified.</span> Get
-                        <span class="text-purple-500">Hired.</span>
-                      </p>
-                    </div>
-                    <div
-                      class="yellow_tag cursor-pointer"
-                      onclick="closeYellowTag()"
-                    >
-                      <p>
-                        Get Personalized Recommendations by taking this test
-                      </p>
-                      <div class="hide"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="py-8 w-[40%] max-[900px]:w-[70%]">
-                  <img
-                    src="/src/assets/banner_img.svg"
-                    alt="banner_pic"
-                    class="h-auto p-6"
-                  />
-                </div>
-              </div>
-            </div>
-          </section>
-          <div className="grid lg:grid-cols-3 md:grid-cols-2  grid-cols-1 gap-10 mt-10 px-4 ">
-            <CareerCard />
-            <CareerCard />
-            <CareerCard />
-            <CareerCard />
-            <CareerCard />
-            <CareerCard />
+      <div className="final m-auto  bg-gradient-to-r rounded-lg text-white from-[#f4b9cd] to-[#8677ae]  md:mt-5 mt-1 ">
+        <div className="lg:w-1/2 w-full md:p-8 p-6">
+          <div className="md:text-5xl text-2xl font-bold mt-4 ">
+            Discover your path and land on your dream career
+          </div>
+          <div className="mt-4 text-sm">
+            Explore reputable programs, distinguished careers, and resources you
+            may need along the way. we give you the information, tools, and
+            support you need to quickly get into a tech career. Find the right
+            carrer for you and make a change.
+          </div>
+
+          <div className="md:pt-8 pt-2 text-black">
+            Create Possibilities For Your Future.
           </div>
         </div>
+        <div className="w-1/2"></div>
+      </div>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 pb-10 w-11/12 m-auto mt-4">
+        <CareerCard />
+        <CareerCard />
+        <CareerCard />
+        <CareerCard />
+        <CareerCard />
+        <CareerCard />
+      </div>
+      <div className="final">
+        <div className="text-3xl font-bold mt-6 mb-4 ">All Assesments</div>
+        <div class="sticky  top-0 z-10 flex flex-wrap gap-2 mb-8 final mx-auto px-4 py-2 bg-white h-14 overflow-hidden md:overflow-auto md:h-auto">
+          <div
+            class="tagCourse p-3 bg-black text-white rounded-md flex-shrink-0"
+            data-tag="all"
+          >
+            All
+          </div>
+          <div
+            class="tagCourse p-3 bg-gray-200 text-black rounded-md flex-shrink-0"
+            data-tag="python"
+          >
+            Python
+          </div>
+          <div
+            class="tagCourse p-3 bg-gray-200 text-black rounded-md flex-shrink-0"
+            data-tag="web-development"
+          >
+            Web Development
+          </div>
+          <div
+            class="tagCourse p-3 bg-gray-200 text-black rounded-md flex-shrink-0"
+            data-tag="frontend"
+          >
+            Frontend
+          </div>
+          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+            Python
+          </div>
+          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+            Python
+          </div>
+          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+            Python
+          </div>
+          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+            Python
+          </div>
+          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+            Python
+          </div>
+          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+            Python
+          </div>
+          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+            Python
+          </div>
+          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+            Python
+          </div>
+          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+            Python
+          </div>
+          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+            Python
+          </div>
+          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+            Python
+          </div>
+          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+            Python
+          </div>
+          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+            Python
+          </div>
+          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+            Python
+          </div>
+          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+            Python
+          </div>
+          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+            +8
+          </div>
+        </div>
+      </div>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 pb-10 w-11/12 m-auto mt-4">
+        <CareerCard />
+        <CareerCard />
+        <CareerCard />
+        <CareerCard />
+        <CareerCard />
+        <CareerCard />
       </div>
     </div>
   );
