@@ -12,8 +12,8 @@ import FAQ from "./fasq";
 function CourseDetails() {
   return (
     <div className="bg-[#F8F9FB]">
-      <div className="md:w-[1250px] w-full m-auto  bg-white md:mt-10  border-2 border-black">
-        <div className="md:w-2/3 w-full p-8">
+      <div className="2xl:w-[1250px] w-full m-auto  bg-white md:mt-10  border-2 border-black">
+        <div className="xl:w-2/3 w-full p-8">
           <div className="text-[#d34eff]">Course</div>
           <div className="md:text-3xl text-2xl font-bold mt-4 ">
             Introduction to Pandas and Numpy for Data Analysis
@@ -50,9 +50,9 @@ function CourseDetails() {
           </div>
         </div>
       </div>
-      <div className="md:w-[1250px] w-full m-auto  mt-10  gap-16 flex md:flex-row flex-col">
-        <div className="md:w-2/3 w-11/12 m-auto">
-          <div className="text-3xl font-bold">Course Overview</div>
+      <div className="final m-auto   gap-16 flex 2xl:flex-row flex-col">
+        <div className=" ">
+          <div className="text-3xl font-bold mt-4">Course Overview</div>
           <div className="mt-6 text-justify">
             Introduction to Pandas and Numpy for Data Analysis Introduction to
             Pandas and Numpy for Data Analysis Introduction to Pandas and Numpy
@@ -306,7 +306,7 @@ function CourseDetails() {
             </div>
           </div>
         </div>
-        <div className="md:w-1/3 w-11/12 m-auto">
+        <div className="2xl:w-1/3 w-11/12 m-auto ">
           <div className="mt-8 p-6 bg-gray-100 rounded-lg shadow-lg max-w-md mx-auto">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">
               Skills You'll Gain
