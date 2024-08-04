@@ -1,7 +1,12 @@
 import React from "react";
+import CourseDetails from "../courses/details";
 
 function ProjectDetails() {
-  return <div>ProjectDetails</div>;
+  return (
+    <div>
+      <CourseDetails />
+    </div>
+  );
 }
 
 export default ProjectDetails;

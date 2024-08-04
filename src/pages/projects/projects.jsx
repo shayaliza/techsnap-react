@@ -1,4 +1,5 @@
 import React from "react";
+import { FaClock, FaDownload, FaUserFriends } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 function Projects() {
@@ -6,181 +7,164 @@ function Projects() {
   const handleClick = () => {
     navigate("/projects/details");
   };
-  const Card = () => {
+  const CareerCard = () => {
     return (
-      <div class="course_card project_card m-5 w-[30%] min-w-[320px] mb-20 shadow-md flex flex-col">
-        <div class="image">
-          <img
-            src="/src/assets/card_banner.svg"
-            alt="card"
-            class="w-full h-48 object-cover"
-          />
+      <div className="flex flex-col p-4 bg-white shadow-md border">
+        <div className="text-[#8677ae] text-sm">ASSESMENT</div>
+        <div className="font-bold text-black">Azure Fundamentals</div>
+
+        <div className="border border-gray-200 mt-10"></div>
+        <div className="flex justify-between mt-2" onClick={handleClick}>
+          <div className="text-gray-800">Theory</div>
+          <div className="flex gap-3">
+            <div className="text-blue-500 font-semibold">Topics</div>
+            <div className="border border-gray-800 rounded-md px-2 text-black ">
+              Start
+            </div>
+          </div>
         </div>
-        <div class="course_body flex flex-col justify-between">
-          <div class="title p-4 pb-2">
-            <span class="text-pink-500 font-semibold">Tutorial</span>
-            <p class="font-bold">Introduction to Python</p>
+      </div>
+    );
+  };
+  const MainCard = () => {
+    return (
+      <div className="bg-card p-6 rounded-lg shadow-md">
+        <h2 className="text-2xl font-bold mb-2">Multiplayer Game - Connect4</h2>
+        <p className="text-gray-500 mb-4">
+          If you ever wondered how multiplayer games are made or wanted to make
+          a game for your weekend, this is the project for you. In this python
+          project you will be creating a multiplayer Connect4 game for you and
+          your friends using fundamentals of PyGame, Sockets and game
+          development.
+        </p>
+        <div className="mb-4">
+          <span className="font-semibold">Author:</span> Apoorv Goyal{" "}
+          <FaUserFriends className="inline-block ml-1" />
+        </div>
+        <div className="mb-4">
+          <span className="font-semibold">Collaborator(s):</span> Kevin Paulose,
+          Kiran <FaUserFriends className="inline-block ml-1" />
+        </div>
+        <div className="mb-4">
+          <span className="font-semibold">Prerequisite(s):</span> Python
+        </div>
+        <div className="flex flex-row items-center mb-4 bg-gray-100 w-max p-2 rounded-md">
+          <div className="mr-2 flex flex-row gap-2 ">
+            <FaClock className="mt-1" />
+            <div>25 hours</div>
           </div>
-          <div class="par text-sm p-2">
-            <p>
-              Master the basics of data analysis in Python. Expand your skillset
-              by learning scientific computing with numpy. Master the basics of
-              data analysis in Python.
-            </p>
-          </div>
-          <div class="icons flex justify-between p-2">
-            <div class="icon_item flex items-center">
-              <span>
-                <img
-                  src="/src/assets/card_time.svg"
-                  alt="time"
-                  class="w-5 h-5"
-                />
-              </span>
-              <p>16 hours</p>
-            </div>
-            <div class="icon_item flex items-center">
-              <span>
-                <img
-                  src="/src/assets/card_time.svg"
-                  alt="time"
-                  class="w-5 h-5"
-                />
-              </span>
-              <p>16 hours</p>
-            </div>
-            <div class="icon_item flex items-center">
-              <span>
-                <img
-                  src="/src/assets/card_time.svg"
-                  alt="time"
-                  class="w-5 h-5"
-                />
-              </span>
-              <p>16 hours</p>
-            </div>
-          </div>
-          <div class="author_tag flex items-center p-2">
-            <p class="text-gray-700 font-semibold">Author:</p>
-            <div class="name flex items-center ml-2">
-              <span>
-                <img src="/src/assets/coin.svg" alt="indian" class="w-4 h-4" />
-              </span>
-              <h3 class="text-gray-700 font-semibold">Alan Biju</h3>
-            </div>
-          </div>
-          <div class="card_tags p-2">
-            <p class="font-semibold">Prerequisites :</p>
-            <div class="tags_box flex items-center">
-              <div class="tags bg-purple-200 py-1 px-2 rounded-lg mr-2">
-                <p>React</p>
-              </div>
-              <div class="tags bg-purple-200 py-1 px-2 rounded-lg mr-2">
-                <p>Kodo</p>
-              </div>
-            </div>
-          </div>
+          <span className="text-muted-foreground">
+            | Difficulty: Intermediate
+          </span>
+        </div>
+        <h3 className="font-semibold mb-2 text-gray-700">
+          Skills to be Learned
+        </h3>
+        <div className="flex flex-wrap gap-2 mb-4 text-gray-700">
+          <span className="px-2 py-1 rounded bg-gray-200">Pygame</span>
+          <span className="bg-gray-200 px-2 py-1 rounded">
+            Game Development
+          </span>
+          <span className="bg-gray-200 px-2 py-1 rounded">
+            Networking Fundamentals
+          </span>
+          <span className="bg-gray-200 px-2 py-1 rounded">
+            Socket Communication
+          </span>
+          <span className="bg-gray-200 px-2 py-1 rounded">Game Engine</span>
+        </div>
+        <div className="flex space-x-4">
           <button
-            class="w-full h-9 bg-blue-500 text-white font-semibold rounded-md mt-4"
+            className="px-4 py-2 rounded border-green-600 text-green-600 hover:bg-green-400/10 border"
             onClick={handleClick}
           >
-            View in Detail
+            View Project
+          </button>
+          <button className="px-4 py-2 rounded flex items-center bg-green-600 text-white ">
+            <FaDownload className="mr-2" /> Download Project
           </button>
         </div>
       </div>
     );
   };
   return (
-    <div>
-      <div class="w-full mx-auto max_width_holder max-w-[1400px] max-[1500px]:max-w-[1100px] overflow-x-hidden overflow-y-scroll ">
-        <section class="">
-          <div class="final bg-color relative bg-[#26cd7f]">
-            <div class="flex items-center max-[900px]:flex-col-reverse justify-between min-[900px]:h-[400px]">
-              <div class="w-full lg:w-1/2">
-                <div class="px-6 py-2">
-                  <div class="text-3xl font-bold mb-4">
-                    Grow Your Skills and Elevate your Career to next Level with
-                    Our Courses
-                  </div>
-                  <div class="mb-4">
-                    <p class="text-sm">
-                      Learn the basics, or refine your skills with tutorials
-                      designed to inspire from top mentors and specialist
-                      organisations. Get Career Guidance and Boost Your Resume
-                      and also Learn faster with real hands-on projects and
-                      quizes and assesments
-                    </p>
-                  </div>
-                  <div class="mb-4">
-                    <p class="text-base">
-                      Get <span class="text-purple-500">Skilled.</span> Get
-                      <span class="text-purple-500">Certified.</span> Get
-                      <span class="text-purple-500">Hired.</span>
-                    </p>
-                  </div>
-                  <div
-                    class="yellow_tag cursor-pointer"
-                    onclick="closeYellowTag()"
-                  >
-                    <p>Get Personalized Recommendations by taking this test</p>
-                    <div class="hide"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="py-8 w-[40%] max-[900px]:w-[70%]">
-                <img
-                  src="/src/assets/banner_img.svg"
-                  alt="banner_pic"
-                  class="h-auto p-6"
-                />
-              </div>
-            </div>
+    <>
+      <div className="final m-auto flex flex-row  bg-gradient-to-r rounded-lg text-white from-[#f4b9cd] to-[#8677ae]  md:mt-5 mt-1 ">
+        <div className="xl:w-1/2 w-full md:p-8 p-6">
+          <div className="md:text-5xl text-2xl font-bold mt-4 ">
+            Learn Programming by Building projects
           </div>
-          <div class="final p-4">
-            <div class="title relative text-2xl mt-12 mb-4 font-bold">
-              <h1>Popular Projects</h1>
-            </div>
-            <div class=" flex flex-wrap ">
-              <Card />
-              <Card />
-              <Card />
-            </div>
+          <div className="mt-4 text-sm">
+            Explore reputable programs, distinguished careers, and resources you
+            may need along the way. we give you the information, tools, and
+            support you need to quickly get into a tech career. Find the right
+            carrer for you and make a change.
+          </div>
+          <div className=" px-4 py-2 rounded-md mt-4 text-white bg-orange-600 w-max ">
+            Start Building Projects
+          </div>
+        </div>
+        <div className="xl:w-1/2 hidden">
+          <div className="grid grid-cols-2 gap-4  my-4 mr-2">
+            <CareerCard />
+            <CareerCard />
+            <CareerCard />
+            <CareerCard />
+          </div>
+        </div>
+      </div>
+      <div className="final px-4">
+        <div className="text-3xl font-bold mt-6 mb-4">Featured Projects</div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 m-auto mt-4">
+          <MainCard />
+          <MainCard />
+        </div>
+        <div className="text-3xl font-bold mt-6 mb-4">All Projects</div>
+        <div class="sticky  top-0 z-10 flex flex-wrap gap-2 mb-2 max-w-[1150px] mx-auto px-4 py-2 bg-white  overflow-hidden md:overflow-auto md:h-auto">
+          <div
+            class="tagCourse p-3 bg-black text-white rounded-md flex-shrink-0"
+            data-tag="all"
+          >
+            All
+          </div>
+          <div
+            class="tagCourse p-3 bg-gray-200 text-black rounded-md flex-shrink-0"
+            data-tag="python"
+          >
+            Python
+          </div>
+          <div
+            class="tagCourse p-3 bg-gray-200 text-black rounded-md flex-shrink-0"
+            data-tag="web-development"
+          >
+            Web Development
+          </div>
+          <div
+            class="tagCourse p-3 bg-gray-200 text-black rounded-md flex-shrink-0"
+            data-tag="frontend"
+          >
+            Frontend
           </div>
 
-          <div class=" px-4">
-            <div class="title flex justify-between items-center text-xl">
-              <div>
-                <p class="font-bold">All courses</p>
-                <span class="text-xs">86 results on techsnap</span>
-              </div>
-              <div class="search">
-                <form class="search-container flex">
-                  <input
-                    type="text"
-                    id="search-bar"
-                    placeholder="search courses"
-                    class="border border-gray-400 rounded px-2 py-1"
-                  />
-                  <a href="#">
-                    <img
-                      src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"
-                      class="search-icon w-10 h-10 "
-                      alt="search icon"
-                    />
-                  </a>
-                </form>
-              </div>
-            </div>
-            <div class=" flex flex-wrap ">
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-            </div>
+          <div
+            class="tagCourse p-3 bg-gray-200 text-black rounded-md flex-shrink-0"
+            data-tag="python"
+          >
+            Python
           </div>
-        </section>
+          <div
+            class="tagCourse p-3 bg-gray-200 text-black rounded-md flex-shrink-0"
+            data-tag="web-development"
+          >
+            Web Development
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4  m-auto mt-4">
+          <MainCard />
+          <MainCard />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
