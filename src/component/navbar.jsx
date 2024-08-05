@@ -258,8 +258,9 @@ function Navbar() {
               </h4>
             </div>
             <Link
-              to="#"
-              className="flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
+              to="/profile"
+              className={`flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
+               ${isActive("/profile") ? "bg-gray-500 " : "hover:bg-gray-700"}`}
             >
               <img
                 src="/src/assets/account (1).png"
@@ -271,8 +272,13 @@ function Navbar() {
               </p>
             </Link>
             <Link
-              to="#"
-              className="flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
+              to="/editprofile"
+              className={`flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
+                ${
+                  isActive("/editprofile")
+                    ? "bg-gray-500 "
+                    : "hover:bg-gray-700"
+                }`}
             >
               <img
                 src="/src/assets/edit (1).png"
@@ -587,8 +593,11 @@ function Navbar() {
               </div>
               <Link
                 onClick={toggleMobileMenu}
-                to="#"
-                className="flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
+                to="/profile"
+                className={`flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
+                 ${
+                   isActive("/profile") ? "bg-gray-500 " : "hover:bg-gray-700"
+                 }`}
               >
                 <img
                   src="/src/assets/account (1).png"
@@ -604,8 +613,13 @@ function Navbar() {
               </Link>
               <Link
                 onClick={toggleMobileMenu}
-                to="#"
-                className="flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
+                to="/editprofile"
+                className={`flex h-10 text-white text-[14px] w-full justify-center items-center hover:text-gray-400 transition-colors duration-300"
+                 ${
+                   isActive("/editprofile")
+                     ? "bg-gray-500 "
+                     : "hover:bg-gray-700"
+                 }`}
               >
                 <img
                   src="/src/assets/edit (1).png"

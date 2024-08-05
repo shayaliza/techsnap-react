@@ -22,6 +22,8 @@ import Catalog from "./pages/catalog/catalog";
 import AssementDetails from "./pages/assesment/deatils";
 import SkillPath from "./pages/skillPath/skillPath";
 import SkillPathDetails from "./pages/skillPath/detail";
+import ProfilePage from "./pages/profile/firstProfile";
+import SecondProfilePage from "./pages/profile/secondProfile";
 const Routing = () => {
   const Home = () => <h1>Hello World</h1>;
   return (
@@ -60,6 +62,10 @@ const Routing = () => {
           <Route path="assesment/details" element={<AssementDetails />} />
 
           <Route path="catalog" element={<Catalog />} />
+
+          {/* Profile */}
+          <Route path="editprofile" element={<ProfilePage />} />
+          <Route path="profile" element={<SecondProfilePage />} />
         </Route>
 
         <Route path="*" element={<h1>Page Not Found</h1>} />
