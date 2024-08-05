@@ -50,8 +50,8 @@ function CourseDetails() {
           </div>
         </div>
       </div>
-      <div className="final m-auto   gap-16 flex 2xl:flex-row flex-col">
-        <div className=" ">
+      <div className="final   gap-16 flex md:flex-row flex-col">
+        <div className=" md:w-2/3 w-11/12 m-auto">
           <div className="text-3xl font-bold mt-4">Course Overview</div>
           <div className="mt-6 text-justify">
             Introduction to Pandas and Numpy for Data Analysis Introduction to
@@ -306,7 +306,7 @@ function CourseDetails() {
             </div>
           </div>
         </div>
-        <div className="2xl:w-1/3 w-11/12 m-auto ">
+        <div className="md:w-1/3 w-11/12 m-auto md:m-0 ">
           <div className="mt-8 p-6 bg-gray-100 rounded-lg shadow-lg max-w-md mx-auto">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">
               Skills You'll Gain

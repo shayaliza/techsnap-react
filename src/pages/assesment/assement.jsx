@@ -43,98 +43,100 @@ function Assement() {
         </div>
         <div className="w-1/2"></div>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 pb-10 w-11/12 m-auto mt-4">
-        <CareerCard />
-        <CareerCard />
-        <CareerCard />
-        <CareerCard />
-        <CareerCard />
-        <CareerCard />
-      </div>
       <div className="final">
-        <div className="text-3xl font-bold mt-6 mb-4 ">All Assesments</div>
-        <div class="sticky  top-0 z-10 flex flex-wrap gap-2 mb-8 final mx-auto px-4 py-2 bg-white h-14 overflow-hidden md:overflow-auto md:h-auto">
-          <div
-            class="tagCourse p-3 bg-black text-white rounded-md flex-shrink-0"
-            data-tag="all"
-          >
-            All
-          </div>
-          <div
-            class="tagCourse p-3 bg-gray-200 text-black rounded-md flex-shrink-0"
-            data-tag="python"
-          >
-            Python
-          </div>
-          <div
-            class="tagCourse p-3 bg-gray-200 text-black rounded-md flex-shrink-0"
-            data-tag="web-development"
-          >
-            Web Development
-          </div>
-          <div
-            class="tagCourse p-3 bg-gray-200 text-black rounded-md flex-shrink-0"
-            data-tag="frontend"
-          >
-            Frontend
-          </div>
-          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
-            Python
-          </div>
-          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
-            Python
-          </div>
-          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
-            Python
-          </div>
-          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
-            Python
-          </div>
-          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
-            Python
-          </div>
-          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
-            Python
-          </div>
-          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
-            Python
-          </div>
-          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
-            Python
-          </div>
-          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
-            Python
-          </div>
-          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
-            Python
-          </div>
-          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
-            Python
-          </div>
-          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
-            Python
-          </div>
-          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
-            Python
-          </div>
-          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
-            Python
-          </div>
-          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
-            Python
-          </div>
-          <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
-            +8
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 pb-10  m-auto mt-4">
+          <CareerCard />
+          <CareerCard />
+          <CareerCard />
+          <CareerCard />
+          <CareerCard />
+          <CareerCard />
+        </div>
+        <div className="">
+          <div className="text-3xl font-bold mt-6 mb-4 ">All Assesments</div>
+          <div class="sticky  top-0 z-10 flex flex-wrap gap-2 mb-8 final mx-auto px-4 py-2 bg-white h-14 overflow-hidden md:overflow-auto md:h-auto">
+            <div
+              class="tagCourse p-3 bg-black text-white rounded-md flex-shrink-0"
+              data-tag="all"
+            >
+              All
+            </div>
+            <div
+              class="tagCourse p-3 bg-gray-200 text-black rounded-md flex-shrink-0"
+              data-tag="python"
+            >
+              Python
+            </div>
+            <div
+              class="tagCourse p-3 bg-gray-200 text-black rounded-md flex-shrink-0"
+              data-tag="web-development"
+            >
+              Web Development
+            </div>
+            <div
+              class="tagCourse p-3 bg-gray-200 text-black rounded-md flex-shrink-0"
+              data-tag="frontend"
+            >
+              Frontend
+            </div>
+            <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+              Python
+            </div>
+            <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+              Python
+            </div>
+            <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+              Python
+            </div>
+            <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+              Python
+            </div>
+            <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+              Python
+            </div>
+            <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+              Python
+            </div>
+            <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+              Python
+            </div>
+            <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+              Python
+            </div>
+            <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+              Python
+            </div>
+            <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+              Python
+            </div>
+            <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+              Python
+            </div>
+            <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+              Python
+            </div>
+            <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+              Python
+            </div>
+            <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+              Python
+            </div>
+            <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+              Python
+            </div>
+            <div class="p-3 bg-gray-200 text-black rounded-md flex-shrink-0">
+              +8
+            </div>
           </div>
         </div>
-      </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 pb-10 w-11/12 m-auto mt-4">
-        <CareerCard />
-        <CareerCard />
-        <CareerCard />
-        <CareerCard />
-        <CareerCard />
-        <CareerCard />
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 pb-10 m-auto mt-4">
+          <CareerCard />
+          <CareerCard />
+          <CareerCard />
+          <CareerCard />
+          <CareerCard />
+          <CareerCard />
+        </div>
       </div>
     </div>
   );
